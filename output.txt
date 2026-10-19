@@ -1,0 +1,117 @@
+=================================================================
+  CUSTOMER SUPPORT PLATFORM: FULL EXPERIMENTATION PIPELINE
+=================================================================
+
+[1/7] Generating synthetic data...
+  → 20132 tickets | 120660 conversation turns | 5000 customers
+  → Groups: {np.str_('control'): 10067, np.str_('treatment'): 10065}
+  → Escalation rate: 19.1%
+  → Reopen rate: 12.0%
+
+[2/7] Customer Journey Segmentation + Markov Chain...
+
+  Segment Profile:
+                 n_customers  avg_tickets  avg_resolution_hrs  avg_escalations  avg_reopens  avg_csat
+segment_label                                                                                        
+At-Risk                 2001         4.23               13.27             0.60         0.90      3.10
+Escalators               985         5.41               10.58             1.99         0.32      3.30
+Quick Resolvers         2014         3.15                7.58             0.34         0.14      3.75
+  → Saved: outputs/segments.png
+
+  Markov Chain Analysis:
+  Direct resolution rate: 0.000
+  Expected path length: 0.00 steps
+  → Saved: outputs/markov_matrix.png
+  → Saved: outputs/markov_comparison.png
+  Direct resolution: Control=0.810 vs Treatment=0.807
+
+[3/7] RAG Chatbot Multi-Turn Evaluation...
+  → Saved: outputs/rag_evaluation.csv (400 evaluations)
+
+  RAGAS Metrics by Config:
+                faithfulness  relevance  correctness  resolved  n_turns
+config                                                                 
+enhanced_full          0.257      1.000          0.5       1.0     6.06
+enhanced_split         0.310      0.835          0.5       1.0     5.97
+standard_full          0.258      0.665          0.5       1.0     5.88
+standard_split         0.271      0.620          0.5       1.0     5.81
+  → Saved: outputs/rag_metrics.png
+
+[4/7] A/B Testing...
+  Power: n=22,855 for 8% lift | n=394 for d=0.2 | MDE=0.0395
+  → Saved: outputs/power_curve.png
+
+  A/B Test Results:
+    resolution_time: 10.606 vs 10.325 | d=-0.0349 | p=0.0133 ✓
+    csat: 3.354 vs 3.437 | d=0.0921 | p=0.0000 ✓
+    escalation_rate: 0.1899 vs 0.1930 | lift=1.64% | p=0.5740 ✗
+    reopen_rate: 0.1215 vs 0.1175 | lift=-3.25% | p=0.3877 ✗
+
+  Holm-corrected p-values: ['0.0398', '0.0000', '0.7753', '0.7753']
+
+  Segment-Level A/B Test (Heterogeneous Treatment Effect):
+    At-Risk: d=-0.0278 | p=0.2016 ✗
+    Quick Resolvers: d=-0.0210 | p=0.4039 ✗
+    Escalators: d=-0.0244 | p=0.3740 ✗
+
+  Sequential Monitoring:
+    Check 1/5: p=0.8626 → CONTINUE
+    Check 2/5: p=0.3489 → CONTINUE
+    Check 3/5: p=0.2577 → CONTINUE
+    Check 4/5: p=0.0222 → CONTINUE
+    Check 5/5: p=0.0133 → CONTINUE
+  → Saved: outputs/sequential.png
+  → Saved: outputs/ci_summary.png
+
+[5/7] Survival / Churn Analysis...
+  → Saved: outputs/survival_curves.png
+  Log-rank: p=0.9438 ✗ NOT SIGNIFICANT
+  Cox PH (group): HR=1.0142 (95% CI: 0.9593-1.0723) | p=0.6187
+  → Treatment increases churn risk by 1.4%
+  30-day churn: Control=61.0% | Treatment=60.7%
+  → Saved: outputs/cox_forest.png
+  A/B Survival Test: HR=1.0020 | p=0.9438 ✗
+
+[6/7] End-to-End Metrics Pipeline...
+  → Loaded: 20132 tickets, 120660 conversation turns, 5000 churn records
+  → Stored in DuckDB: outputs/metrics.duckdb
+  → Parquet: outputs/*.parquet
+  → Dashboard data: outputs/dashboard/ab_summary.csv
+  → Dashboard data: outputs/dashboard/churn_summary.csv
+  → Dashboard data: outputs/dashboard/category_perf.csv
+  → Dashboard data: outputs/dashboard/conv_metrics.csv
+
+  Pipeline Analytics:
+  A/B Summary:
+       group  n_tickets  avg_resolution_hrs  avg_csat  n_escalations  escalation_rate  n_reopens
+0  treatment      10065           10.325315  3.437109         1943.0         0.193045     1183.0
+1    control      10067           10.606140  3.353819         1912.0         0.189927     1223.0
+
+  Churn Summary:
+       group  n_customers  churn_rate  avg_time_to_churn
+0  treatment         2500         1.0           32.72304
+1    control         2500         1.0           32.82908
+
+[7/7] Integrated Dashboard...
+  → Saved: outputs/dashboard_summary.png
+
+=================================================================
+  FINAL SUMMARY
+=================================================================
+
+                         Metric                   Test   p-value Significant  Control  Treatment       Effect
+0             resolution_time                 t-test  0.013279           ✓  10.6061    10.3253    d=-0.0349
+1                        csat                 t-test  0.000000           ✓   3.3538     3.4371     d=0.0921
+2             escalation_rate  two-proportion z-test  0.574026           ✗   0.1899     0.1930   lift=1.64%
+3                 reopen_rate  two-proportion z-test  0.387660           ✗   0.1215     0.1175  lift=-3.25%
+4          resolution_At-Risk                 t-test  0.201558           ✗  12.5787    12.3223    d=-0.0278
+5  resolution_Quick Resolvers                 t-test  0.403856           ✗   7.7700     7.6556     d=-0.021
+6       resolution_Escalators                 t-test  0.374003           ✗  10.6870    10.5004    d=-0.0244
+7                churn_hazard      log-rank + Cox PH  0.943789           ✗      NaN        NaN     HR=1.002
+
+  Outputs saved to: outputs/
+  Total plots: 10+ | CSVs: 5+ | Parquet: 3 | DuckDB: 1
+
+  DONE!
+=================================================================
+

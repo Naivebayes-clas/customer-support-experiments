@@ -1,0 +1,3 @@
+group,n_customers,churn_rate,avg_time_to_churn
+control,2500,0.2132,318.7773600000003
+treatment,2500,0.1892,322.39956

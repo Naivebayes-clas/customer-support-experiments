@@ -1,0 +1,13 @@
+numpy
+pandas
+scipy
+statsmodels
+scikit-learn
+matplotlib
+seaborn
+lifelines
+duckdb
+pyarrow
+nltk
+jupyter
+   

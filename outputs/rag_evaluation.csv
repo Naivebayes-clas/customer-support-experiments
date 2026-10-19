@@ -1,0 +1,401 @@
+intent,category,faithfulness,relevance,correctness,resolved,n_turns,escalated,config
+payment failed,billing,0.188,0.5,0.286,True,8,True,standard_full
+return,shipping,0.467,1.0,0.375,True,6,True,standard_full
+password reset,account,0.5,0.5,0.5,True,5,False,standard_full
+feature request,product,0.471,1.0,0.571,True,10,True,standard_full
+2FA,account,0.222,1.0,0.375,True,7,True,standard_full
+refund,billing,0.438,1.0,0.182,True,4,False,standard_full
+delivery delay,shipping,0.133,0.5,0.222,True,7,True,standard_full
+2FA,account,0.222,1.0,0.375,True,7,True,standard_full
+feature request,product,0.471,1.0,0.571,True,2,False,standard_full
+subscription change,billing,0.188,0.5,0.5,True,8,True,standard_full
+error code,technical,0.6,1.0,0.286,True,9,True,standard_full
+invoice,billing,0.125,0.0,0.167,False,3,False,standard_full
+upgrade,product,0.176,1.0,0.667,True,5,False,standard_full
+error code,technical,0.6,1.0,0.286,True,7,True,standard_full
+password reset,account,0.5,0.5,0.5,True,4,False,standard_full
+password reset,account,0.5,0.5,0.5,True,5,False,standard_full
+compatibility,product,0.118,1.0,0.0,True,5,False,standard_full
+profile update,account,0.222,0.5,0.6,True,5,False,standard_full
+slow performance,technical,0.133,1.0,0.0,True,10,True,standard_full
+invoice,billing,0.125,0.0,0.167,False,5,False,standard_full
+damaged package,shipping,0.133,1.0,0.375,True,8,True,standard_full
+slow performance,technical,0.133,1.0,0.0,True,5,False,standard_full
+return,shipping,0.467,1.0,0.375,True,5,False,standard_full
+refund,billing,0.438,1.0,0.182,True,7,True,standard_full
+crash,technical,0.133,0.0,0.0,False,6,True,standard_full
+refund,billing,0.438,1.0,0.182,True,7,True,standard_full
+profile update,account,0.222,0.5,0.6,True,3,False,standard_full
+profile update,account,0.222,0.5,0.6,True,6,True,standard_full
+delivery delay,shipping,0.133,0.5,0.222,True,6,True,standard_full
+delivery delay,shipping,0.133,0.5,0.222,True,4,False,standard_full
+invoice,billing,0.125,0.0,0.167,False,8,True,standard_full
+data export,account,0.222,0.5,0.333,True,5,False,standard_full
+crash,technical,0.133,0.0,0.0,False,11,True,standard_full
+password reset,account,0.5,0.5,0.5,True,5,False,standard_full
+compatibility,product,0.118,1.0,0.0,True,4,False,standard_full
+error code,technical,0.6,1.0,0.286,True,6,True,standard_full
+upgrade,product,0.176,1.0,0.667,True,5,False,standard_full
+return,shipping,0.467,1.0,0.375,True,5,False,standard_full
+crash,technical,0.133,0.0,0.0,False,8,True,standard_full
+profile update,account,0.222,0.5,0.6,True,5,False,standard_full
+invoice,billing,0.125,0.0,0.167,False,6,True,standard_full
+2FA,account,0.222,1.0,0.375,True,5,False,standard_full
+damaged package,shipping,0.133,1.0,0.375,True,8,True,standard_full
+password reset,account,0.5,0.5,0.5,True,5,False,standard_full
+slow performance,technical,0.133,1.0,0.0,True,8,True,standard_full
+profile update,account,0.222,0.5,0.6,True,6,True,standard_full
+feature request,product,0.471,1.0,0.571,True,3,False,standard_full
+feature request,product,0.471,1.0,0.571,True,6,True,standard_full
+compatibility,product,0.118,1.0,0.0,True,4,False,standard_full
+compatibility,product,0.118,1.0,0.0,True,3,False,standard_full
+damaged package,shipping,0.133,1.0,0.375,True,3,False,standard_full
+payment failed,billing,0.188,0.5,0.286,True,9,True,standard_full
+2FA,account,0.222,1.0,0.375,True,5,False,standard_full
+subscription change,billing,0.188,0.5,0.5,True,4,False,standard_full
+bug report,product,0.353,0.5,0.556,True,5,False,standard_full
+invoice,billing,0.125,0.0,0.167,False,10,True,standard_full
+slow performance,technical,0.133,1.0,0.0,True,7,True,standard_full
+profile update,account,0.222,0.5,0.6,True,5,False,standard_full
+profile update,account,0.222,0.5,0.6,True,8,True,standard_full
+integration,technical,0.133,1.0,0.167,True,9,True,standard_full
+subscription change,billing,0.188,0.5,0.5,True,5,False,standard_full
+damaged package,shipping,0.133,1.0,0.375,True,5,False,standard_full
+profile update,account,0.222,0.5,0.6,True,9,True,standard_full
+compatibility,product,0.118,1.0,0.0,True,5,False,standard_full
+invoice,billing,0.125,0.0,0.167,False,10,True,standard_full
+data export,account,0.222,0.5,0.333,True,3,False,standard_full
+2FA,account,0.222,1.0,0.375,True,8,True,standard_full
+delivery delay,shipping,0.133,0.5,0.222,True,4,False,standard_full
+upgrade,product,0.176,1.0,0.667,True,10,True,standard_full
+invoice,billing,0.125,0.0,0.167,False,8,True,standard_full
+2FA,account,0.222,1.0,0.375,True,3,False,standard_full
+data export,account,0.222,0.5,0.333,True,7,True,standard_full
+profile update,account,0.222,0.5,0.6,True,7,True,standard_full
+compatibility,product,0.118,1.0,0.0,True,6,True,standard_full
+delivery delay,shipping,0.133,0.5,0.222,True,3,False,standard_full
+bug report,product,0.353,0.5,0.556,True,6,True,standard_full
+compatibility,product,0.118,1.0,0.0,True,2,False,standard_full
+refund,billing,0.438,1.0,0.182,True,5,False,standard_full
+crash,technical,0.133,0.0,0.0,False,8,True,standard_full
+feature request,product,0.471,1.0,0.571,True,4,False,standard_full
+profile update,account,0.222,0.5,0.6,True,6,True,standard_full
+damaged package,shipping,0.133,1.0,0.375,True,6,True,standard_full
+payment failed,billing,0.188,0.5,0.286,True,5,False,standard_full
+tracking,shipping,0.133,1.0,0.125,True,3,False,standard_full
+integration,technical,0.133,1.0,0.167,True,7,True,standard_full
+upgrade,product,0.176,1.0,0.667,True,7,True,standard_full
+2FA,account,0.222,1.0,0.375,True,5,False,standard_full
+profile update,account,0.222,0.5,0.6,True,6,True,standard_full
+upgrade,product,0.176,1.0,0.667,True,5,False,standard_full
+password reset,account,0.5,0.5,0.5,True,3,False,standard_full
+2FA,account,0.222,1.0,0.375,True,8,True,standard_full
+2FA,account,0.222,1.0,0.375,True,8,True,standard_full
+data export,account,0.222,0.5,0.333,True,9,True,standard_full
+bug report,product,0.353,0.5,0.556,True,4,False,standard_full
+payment failed,billing,0.188,0.5,0.286,True,4,False,standard_full
+crash,technical,0.133,0.0,0.0,False,3,False,standard_full
+password reset,account,0.5,0.5,0.5,True,6,True,standard_full
+feature request,product,0.471,1.0,0.571,True,9,True,standard_full
+compatibility,product,0.118,1.0,0.0,True,2,False,standard_full
+tracking,shipping,0.133,1.0,0.125,True,4,False,standard_full
+damaged package,shipping,0.133,1.0,0.375,True,9,True,standard_split
+subscription change,billing,0.188,0.5,0.5,True,5,False,standard_split
+compatibility,product,0.118,1.0,0.0,True,4,False,standard_split
+subscription change,billing,0.188,0.5,0.5,True,6,True,standard_split
+refund,billing,0.438,1.0,0.182,True,8,True,standard_split
+payment failed,billing,0.188,0.5,0.857,True,8,True,standard_split
+integration,technical,0.133,1.0,0.167,True,8,True,standard_split
+profile update,account,0.222,0.5,0.6,True,6,True,standard_split
+slow performance,technical,0.133,1.0,0.0,True,4,False,standard_split
+subscription change,billing,0.188,0.5,0.5,True,4,False,standard_split
+password reset,account,0.5,0.5,0.5,True,13,True,standard_split
+crash,technical,0.133,0.0,0.0,False,10,True,standard_split
+tracking,shipping,0.133,1.0,0.125,True,3,False,standard_split
+slow performance,technical,0.133,1.0,0.0,True,9,True,standard_split
+error code,technical,0.6,1.0,0.286,True,6,True,standard_split
+data export,account,0.222,0.5,0.333,True,3,False,standard_split
+compatibility,product,0.118,1.0,0.0,True,7,True,standard_split
+delivery delay,shipping,0.133,0.5,0.222,True,5,False,standard_split
+upgrade,product,0.176,1.0,0.667,True,4,False,standard_split
+profile update,account,0.222,0.5,0.6,True,8,True,standard_split
+damaged package,shipping,0.133,1.0,0.375,True,5,False,standard_split
+data export,account,0.222,0.5,0.333,True,5,False,standard_split
+profile update,account,0.222,0.5,0.6,True,4,False,standard_split
+upgrade,product,0.176,1.0,0.667,True,9,True,standard_split
+invoice,billing,0.125,0.0,0.167,False,3,False,standard_split
+integration,technical,0.133,1.0,0.167,True,2,False,standard_split
+slow performance,technical,0.133,1.0,0.0,True,8,True,standard_split
+2FA,account,0.222,1.0,0.375,True,8,True,standard_split
+tracking,shipping,0.133,1.0,0.125,True,5,False,standard_split
+delivery delay,shipping,0.133,0.5,0.222,True,8,True,standard_split
+compatibility,product,0.118,1.0,0.0,True,8,True,standard_split
+upgrade,product,0.176,1.0,0.667,True,6,True,standard_split
+compatibility,product,0.118,1.0,0.0,True,3,False,standard_split
+upgrade,product,0.176,1.0,0.667,True,3,False,standard_split
+upgrade,product,0.176,1.0,0.667,True,4,False,standard_split
+2FA,account,0.222,1.0,0.375,True,4,False,standard_split
+bug report,product,0.353,0.5,0.556,True,5,False,standard_split
+delivery delay,shipping,0.133,0.5,0.222,True,2,False,standard_split
+crash,technical,0.133,0.0,0.0,False,3,False,standard_split
+invoice,billing,0.125,0.0,0.167,False,8,True,standard_split
+error code,technical,0.6,1.0,0.286,True,5,False,standard_split
+slow performance,technical,0.133,1.0,0.0,True,4,False,standard_split
+2FA,account,0.222,1.0,0.375,True,4,False,standard_split
+2FA,account,0.222,1.0,0.375,True,4,False,standard_split
+compatibility,product,0.118,1.0,0.0,True,3,False,standard_split
+subscription change,billing,0.188,0.5,0.5,True,7,True,standard_split
+crash,technical,0.133,0.0,0.0,False,6,True,standard_split
+bug report,product,0.353,0.5,0.556,True,10,True,standard_split
+crash,technical,0.133,0.0,0.0,False,4,False,standard_split
+error code,technical,0.6,1.0,0.286,True,3,False,standard_split
+integration,technical,0.133,1.0,0.167,True,7,True,standard_split
+refund,billing,0.438,1.0,0.182,True,4,False,standard_split
+delivery delay,shipping,0.133,0.5,0.222,True,5,False,standard_split
+delivery delay,shipping,0.133,0.5,0.222,True,2,False,standard_split
+data export,account,0.222,0.5,0.333,True,8,True,standard_split
+upgrade,product,0.176,1.0,0.667,True,4,False,standard_split
+slow performance,technical,0.133,1.0,0.0,True,3,False,standard_split
+delivery delay,shipping,0.133,0.5,0.222,True,7,True,standard_split
+profile update,account,0.222,0.5,0.6,True,9,True,standard_split
+integration,technical,0.133,1.0,0.167,True,5,False,standard_split
+return,shipping,0.467,1.0,0.375,True,6,True,standard_split
+bug report,product,0.353,0.5,0.556,True,6,True,standard_split
+bug report,product,0.353,0.5,0.556,True,9,True,standard_split
+damaged package,shipping,0.133,1.0,0.375,True,6,True,standard_split
+password reset,account,0.5,0.5,0.5,True,4,False,standard_split
+damaged package,shipping,0.133,1.0,0.375,True,8,True,standard_split
+refund,billing,0.438,1.0,0.182,True,6,True,standard_split
+tracking,shipping,0.133,1.0,0.125,True,4,False,standard_split
+refund,billing,0.438,1.0,0.182,True,5,False,standard_split
+slow performance,technical,0.133,1.0,0.0,True,5,False,standard_split
+2FA,account,0.222,1.0,0.375,True,4,False,standard_split
+profile update,account,0.222,0.5,0.6,True,6,True,standard_split
+error code,technical,0.6,1.0,0.286,True,9,True,standard_split
+crash,technical,0.133,0.0,0.0,False,5,False,standard_split
+feature request,product,0.471,1.0,0.571,True,5,False,standard_split
+feature request,product,0.471,1.0,0.571,True,6,True,standard_split
+feature request,product,0.471,1.0,0.571,True,7,True,standard_split
+integration,technical,0.133,1.0,0.167,True,6,True,standard_split
+delivery delay,shipping,0.133,0.5,0.222,True,8,True,standard_split
+password reset,account,0.5,0.5,0.5,True,4,False,standard_split
+refund,billing,0.438,1.0,0.182,True,9,True,standard_split
+compatibility,product,0.118,1.0,0.0,True,6,True,standard_split
+integration,technical,0.133,1.0,0.167,True,4,False,standard_split
+data export,account,0.222,0.5,0.333,True,6,True,standard_split
+upgrade,product,0.176,1.0,0.667,True,8,True,standard_split
+password reset,account,0.5,0.5,0.5,True,4,False,standard_split
+compatibility,product,0.118,1.0,0.0,True,9,True,standard_split
+slow performance,technical,0.133,1.0,0.0,True,2,False,standard_split
+data export,account,0.222,0.5,0.333,True,3,False,standard_split
+upgrade,product,0.176,1.0,0.667,True,4,False,standard_split
+return,shipping,0.467,1.0,0.375,True,8,True,standard_split
+tracking,shipping,0.133,1.0,0.125,True,7,True,standard_split
+data export,account,0.222,0.5,0.333,True,10,True,standard_split
+refund,billing,0.438,1.0,0.182,True,9,True,standard_split
+password reset,account,0.5,0.5,0.5,True,5,False,standard_split
+slow performance,technical,0.133,1.0,0.0,True,5,False,standard_split
+bug report,product,0.353,0.5,0.556,True,7,True,standard_split
+slow performance,technical,0.133,1.0,0.0,True,4,False,standard_split
+crash,technical,0.133,0.0,0.0,False,8,True,standard_split
+delivery delay,shipping,0.133,0.5,0.222,True,7,True,standard_split
+profile update,account,0.278,0.5,0.8,True,9,True,enhanced_full
+password reset,account,1.0,0.5,0.75,True,11,True,enhanced_full
+invoice,billing,0.188,0.0,0.167,False,6,True,enhanced_full
+2FA,account,0.278,1.0,0.625,True,7,True,enhanced_full
+integration,technical,0.267,1.0,0.667,True,7,True,enhanced_full
+refund,billing,1.0,1.0,0.727,True,5,False,enhanced_full
+refund,billing,1.0,1.0,0.727,True,6,True,enhanced_full
+password reset,account,1.0,0.5,0.75,True,6,True,enhanced_full
+damaged package,shipping,0.467,1.0,0.75,True,6,True,enhanced_full
+feature request,product,1.0,1.0,0.714,True,9,True,enhanced_full
+crash,technical,0.267,0.0,0.2,False,4,False,enhanced_full
+2FA,account,0.278,1.0,0.625,True,9,True,enhanced_full
+subscription change,billing,0.312,0.5,0.75,True,5,False,enhanced_full
+2FA,account,0.278,1.0,0.625,True,4,False,enhanced_full
+profile update,account,0.278,0.5,0.8,True,2,False,enhanced_full
+payment failed,billing,0.312,0.5,0.857,True,4,False,enhanced_full
+slow performance,technical,0.267,1.0,0.75,True,5,False,enhanced_full
+delivery delay,shipping,0.333,0.5,0.667,True,6,True,enhanced_full
+profile update,account,0.278,0.5,0.8,True,7,True,enhanced_full
+damaged package,shipping,0.467,1.0,0.75,True,5,False,enhanced_full
+return,shipping,0.533,1.0,0.5,True,5,False,enhanced_full
+payment failed,billing,0.312,0.5,0.857,True,6,True,enhanced_full
+subscription change,billing,0.312,0.5,0.75,True,7,True,enhanced_full
+bug report,product,0.412,1.0,0.778,True,7,True,enhanced_full
+profile update,account,0.278,0.5,0.8,True,8,True,enhanced_full
+refund,billing,1.0,1.0,0.727,True,5,False,enhanced_full
+2FA,account,0.278,1.0,0.625,True,4,False,enhanced_full
+data export,account,0.389,1.0,0.778,True,7,True,enhanced_full
+feature request,product,1.0,1.0,0.714,True,4,False,enhanced_full
+2FA,account,0.278,1.0,0.625,True,5,False,enhanced_full
+bug report,product,0.412,1.0,0.778,True,4,False,enhanced_full
+payment failed,billing,0.312,0.5,0.857,True,5,False,enhanced_full
+error code,technical,1.0,1.0,0.857,True,5,False,enhanced_full
+payment failed,billing,0.312,0.5,0.857,True,5,False,enhanced_full
+payment failed,billing,0.312,0.5,0.857,True,9,True,enhanced_full
+invoice,billing,0.188,0.0,0.167,False,7,True,enhanced_full
+feature request,product,1.0,1.0,0.714,True,8,True,enhanced_full
+upgrade,product,0.412,1.0,0.833,True,4,False,enhanced_full
+return,shipping,0.533,1.0,0.5,True,9,True,enhanced_full
+bug report,product,0.412,1.0,0.778,True,7,True,enhanced_full
+integration,technical,0.267,1.0,0.667,True,4,False,enhanced_full
+slow performance,technical,0.267,1.0,0.75,True,5,False,enhanced_full
+return,shipping,0.533,1.0,0.5,True,8,True,enhanced_full
+data export,account,0.389,1.0,0.778,True,6,True,enhanced_full
+tracking,shipping,0.333,1.0,0.25,True,4,False,enhanced_full
+refund,billing,1.0,1.0,0.727,True,6,True,enhanced_full
+data export,account,0.389,1.0,0.778,True,6,True,enhanced_full
+return,shipping,0.533,1.0,0.5,True,9,True,enhanced_full
+compatibility,product,0.412,1.0,0.667,True,6,True,enhanced_full
+data export,account,0.389,1.0,0.778,True,8,True,enhanced_full
+bug report,product,0.412,1.0,0.778,True,6,True,enhanced_full
+return,shipping,0.533,1.0,0.5,True,6,True,enhanced_full
+invoice,billing,0.188,0.0,0.167,False,4,False,enhanced_full
+integration,technical,0.267,1.0,0.667,True,4,False,enhanced_full
+data export,account,0.389,1.0,0.778,True,5,False,enhanced_full
+subscription change,billing,0.312,0.5,0.75,True,8,True,enhanced_full
+invoice,billing,0.188,0.0,0.167,False,5,False,enhanced_full
+password reset,account,1.0,0.5,0.75,True,4,False,enhanced_full
+profile update,account,0.278,0.5,0.8,True,5,False,enhanced_full
+compatibility,product,0.412,1.0,0.667,True,4,False,enhanced_full
+damaged package,shipping,0.467,1.0,0.75,True,6,True,enhanced_full
+profile update,account,0.278,0.5,0.8,True,5,False,enhanced_full
+subscription change,billing,0.312,0.5,0.75,True,9,True,enhanced_full
+upgrade,product,0.412,1.0,0.833,True,10,True,enhanced_full
+crash,technical,0.267,0.0,0.2,False,4,False,enhanced_full
+integration,technical,0.267,1.0,0.667,True,6,True,enhanced_full
+slow performance,technical,0.267,1.0,0.75,True,8,True,enhanced_full
+subscription change,billing,0.312,0.5,0.75,True,3,False,enhanced_full
+compatibility,product,0.412,1.0,0.667,True,7,True,enhanced_full
+payment failed,billing,0.312,0.5,0.857,True,7,True,enhanced_full
+2FA,account,0.278,1.0,0.625,True,7,True,enhanced_full
+error code,technical,1.0,1.0,0.857,True,6,True,enhanced_full
+return,shipping,0.533,1.0,0.5,True,5,False,enhanced_full
+damaged package,shipping,0.467,1.0,0.75,True,8,True,enhanced_full
+compatibility,product,0.412,1.0,0.667,True,4,False,enhanced_full
+password reset,account,1.0,0.5,0.75,True,5,False,enhanced_full
+2FA,account,0.278,1.0,0.625,True,5,False,enhanced_full
+bug report,product,0.412,1.0,0.778,True,9,True,enhanced_full
+compatibility,product,0.412,1.0,0.667,True,8,True,enhanced_full
+upgrade,product,0.412,1.0,0.833,True,5,False,enhanced_full
+invoice,billing,0.188,0.0,0.167,False,6,True,enhanced_full
+damaged package,shipping,0.467,1.0,0.75,True,7,True,enhanced_full
+feature request,product,1.0,1.0,0.714,True,5,False,enhanced_full
+subscription change,billing,0.312,0.5,0.75,True,5,False,enhanced_full
+invoice,billing,0.188,0.0,0.167,False,9,True,enhanced_full
+payment failed,billing,0.312,0.5,0.857,True,5,False,enhanced_full
+compatibility,product,0.412,1.0,0.667,True,4,False,enhanced_full
+return,shipping,0.533,1.0,0.5,True,5,False,enhanced_full
+profile update,account,0.278,0.5,0.8,True,12,True,enhanced_full
+return,shipping,0.533,1.0,0.5,True,2,False,enhanced_full
+data export,account,0.389,1.0,0.778,True,7,True,enhanced_full
+2FA,account,0.278,1.0,0.625,True,9,True,enhanced_full
+damaged package,shipping,0.467,1.0,0.75,True,7,True,enhanced_full
+crash,technical,0.267,0.0,0.2,False,3,False,enhanced_full
+tracking,shipping,0.333,1.0,0.25,True,6,True,enhanced_full
+compatibility,product,0.412,1.0,0.667,True,7,True,enhanced_full
+password reset,account,1.0,0.5,0.75,True,6,True,enhanced_full
+error code,technical,1.0,1.0,0.857,True,7,True,enhanced_full
+delivery delay,shipping,0.333,0.5,0.667,True,5,False,enhanced_full
+refund,billing,1.0,1.0,0.727,True,5,False,enhanced_full
+slow performance,technical,0.133,1.0,0.0,True,4,False,enhanced_split
+damaged package,shipping,0.467,1.0,0.75,True,9,True,enhanced_split
+error code,technical,0.667,1.0,0.429,True,5,False,enhanced_split
+compatibility,product,0.235,1.0,0.0,True,4,False,enhanced_split
+password reset,account,1.0,0.5,0.75,True,7,True,enhanced_split
+2FA,account,0.222,1.0,0.5,True,5,False,enhanced_split
+compatibility,product,0.235,1.0,0.0,True,4,False,enhanced_split
+error code,technical,0.667,1.0,0.429,True,5,False,enhanced_split
+integration,technical,0.133,1.0,0.5,True,5,False,enhanced_split
+compatibility,product,0.235,1.0,0.0,True,6,True,enhanced_split
+invoice,billing,0.125,0.0,0.167,False,11,True,enhanced_split
+return,shipping,0.467,1.0,0.375,True,6,True,enhanced_split
+feature request,product,0.647,1.0,0.714,True,7,True,enhanced_split
+return,shipping,0.467,1.0,0.375,True,11,True,enhanced_split
+data export,account,0.333,1.0,0.778,True,9,True,enhanced_split
+password reset,account,1.0,0.5,0.75,True,6,True,enhanced_split
+2FA,account,0.222,1.0,0.5,True,5,False,enhanced_split
+error code,technical,0.667,1.0,0.429,True,4,False,enhanced_split
+feature request,product,0.647,1.0,0.714,True,5,False,enhanced_split
+integration,technical,0.133,1.0,0.5,True,8,True,enhanced_split
+return,shipping,0.467,1.0,0.375,True,5,False,enhanced_split
+error code,technical,0.667,1.0,0.429,True,7,True,enhanced_split
+refund,billing,0.562,1.0,0.273,True,9,True,enhanced_split
+bug report,product,0.412,1.0,0.556,True,4,False,enhanced_split
+subscription change,billing,0.25,0.5,0.625,True,4,False,enhanced_split
+invoice,billing,0.125,0.0,0.167,False,8,True,enhanced_split
+password reset,account,1.0,0.5,0.75,True,6,True,enhanced_split
+profile update,account,0.222,0.5,0.6,True,5,False,enhanced_split
+return,shipping,0.467,1.0,0.375,True,5,False,enhanced_split
+feature request,product,0.647,1.0,0.714,True,7,True,enhanced_split
+upgrade,product,0.235,1.0,0.833,True,7,True,enhanced_split
+data export,account,0.333,1.0,0.778,True,6,True,enhanced_split
+payment failed,billing,0.25,0.5,0.857,True,4,False,enhanced_split
+password reset,account,1.0,0.5,0.75,True,8,True,enhanced_split
+payment failed,billing,0.25,0.5,0.857,True,7,True,enhanced_split
+tracking,shipping,0.333,1.0,0.25,True,9,True,enhanced_split
+password reset,account,1.0,0.5,0.75,True,3,False,enhanced_split
+error code,technical,0.667,1.0,0.429,True,5,False,enhanced_split
+error code,technical,0.667,1.0,0.429,True,5,False,enhanced_split
+data export,account,0.333,1.0,0.778,True,6,True,enhanced_split
+error code,technical,0.667,1.0,0.429,True,8,True,enhanced_split
+compatibility,product,0.235,1.0,0.0,True,10,True,enhanced_split
+integration,technical,0.133,1.0,0.5,True,10,True,enhanced_split
+profile update,account,0.222,0.5,0.6,True,8,True,enhanced_split
+password reset,account,1.0,0.5,0.75,True,5,False,enhanced_split
+slow performance,technical,0.133,1.0,0.0,True,5,False,enhanced_split
+upgrade,product,0.235,1.0,0.833,True,5,False,enhanced_split
+slow performance,technical,0.133,1.0,0.0,True,4,False,enhanced_split
+refund,billing,0.562,1.0,0.273,True,6,True,enhanced_split
+feature request,product,0.647,1.0,0.714,True,4,False,enhanced_split
+profile update,account,0.222,0.5,0.6,True,5,False,enhanced_split
+subscription change,billing,0.25,0.5,0.625,True,9,True,enhanced_split
+damaged package,shipping,0.467,1.0,0.75,True,3,False,enhanced_split
+error code,technical,0.667,1.0,0.429,True,3,False,enhanced_split
+slow performance,technical,0.133,1.0,0.0,True,7,True,enhanced_split
+password reset,account,1.0,0.5,0.75,True,5,False,enhanced_split
+bug report,product,0.412,1.0,0.556,True,7,True,enhanced_split
+error code,technical,0.667,1.0,0.429,True,3,False,enhanced_split
+slow performance,technical,0.133,1.0,0.0,True,3,False,enhanced_split
+compatibility,product,0.235,1.0,0.0,True,9,True,enhanced_split
+compatibility,product,0.235,1.0,0.0,True,6,True,enhanced_split
+tracking,shipping,0.333,1.0,0.25,True,9,True,enhanced_split
+upgrade,product,0.235,1.0,0.833,True,6,True,enhanced_split
+subscription change,billing,0.25,0.5,0.625,True,8,True,enhanced_split
+payment failed,billing,0.25,0.5,0.857,True,4,False,enhanced_split
+delivery delay,shipping,0.333,0.5,0.222,True,4,False,enhanced_split
+password reset,account,1.0,0.5,0.75,True,8,True,enhanced_split
+2FA,account,0.222,1.0,0.5,True,7,True,enhanced_split
+crash,technical,0.133,0.0,0.0,False,4,False,enhanced_split
+subscription change,billing,0.25,0.5,0.625,True,5,False,enhanced_split
+crash,technical,0.133,0.0,0.0,False,4,False,enhanced_split
+crash,technical,0.133,0.0,0.0,False,4,False,enhanced_split
+2FA,account,0.222,1.0,0.5,True,7,True,enhanced_split
+error code,technical,0.667,1.0,0.429,True,3,False,enhanced_split
+return,shipping,0.467,1.0,0.375,True,6,True,enhanced_split
+slow performance,technical,0.133,1.0,0.0,True,9,True,enhanced_split
+integration,technical,0.133,1.0,0.5,True,6,True,enhanced_split
+password reset,account,1.0,0.5,0.75,True,8,True,enhanced_split
+error code,technical,0.667,1.0,0.429,True,5,False,enhanced_split
+payment failed,billing,0.25,0.5,0.857,True,9,True,enhanced_split
+invoice,billing,0.125,0.0,0.167,False,7,True,enhanced_split
+crash,technical,0.133,0.0,0.0,False,3,False,enhanced_split
+data export,account,0.333,1.0,0.778,True,6,True,enhanced_split
+error code,technical,0.667,1.0,0.429,True,8,True,enhanced_split
+refund,billing,0.562,1.0,0.273,True,3,False,enhanced_split
+compatibility,product,0.235,1.0,0.0,True,4,False,enhanced_split
+delivery delay,shipping,0.333,0.5,0.222,True,9,True,enhanced_split
+damaged package,shipping,0.467,1.0,0.75,True,5,False,enhanced_split
+password reset,account,1.0,0.5,0.75,True,2,False,enhanced_split
+tracking,shipping,0.333,1.0,0.25,True,4,False,enhanced_split
+compatibility,product,0.235,1.0,0.0,True,4,False,enhanced_split
+invoice,billing,0.125,0.0,0.167,False,5,False,enhanced_split
+upgrade,product,0.235,1.0,0.833,True,4,False,enhanced_split
+slow performance,technical,0.133,1.0,0.0,True,8,True,enhanced_split
+refund,billing,0.562,1.0,0.273,True,10,True,enhanced_split
+return,shipping,0.467,1.0,0.375,True,6,True,enhanced_split
+delivery delay,shipping,0.333,0.5,0.222,True,6,True,enhanced_split
+return,shipping,0.467,1.0,0.375,True,3,False,enhanced_split
+delivery delay,shipping,0.333,0.5,0.222,True,6,True,enhanced_split
+password reset,account,1.0,0.5,0.75,True,7,True,enhanced_split
