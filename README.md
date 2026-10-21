@@ -2,8 +2,6 @@
 
 A unified experimentation platform for an AI-powered customer support system. Built to demonstrate the full data science workflow: **segmentation → RAG evaluation → A/B testing → survival analysis → end-to-end pipeline**, grounded in real-world B2B SaaS benchmarks.
 
-
-
 ### Results at a Glance
 
 | Metric                 | Improvement                         | Statistical Evidence           |
@@ -315,16 +313,16 @@ A **pipeline test harness** (not a live chatbot) that evaluates the effect of pr
 
 ## Design Decisions & Limitations
 
-| Decision                             | Rationale                                                                     |
-| ------------------------------------ | ----------------------------------------------------------------------------- |
-| Synthetic data (not real)            | No access to real support data; parameters calibrated to published benchmarks |
-| Template-based RAG (not LLM)         | Isolates retrieval/generation architecture effects without API costs          |
-| TF-IDF (not embeddings)              | Demonstrates the pipeline; swap for sentence-transformers in production       |
-| DuckDB (not Snowflake)               | Zero-cost, zero-setup analytical store with full SQL support                  |
-| Bonferroni (not O'Brien-Fleming)     | Most conservative; OBF would allow earlier stopping with the same total α     |
-| Weibull(0.7) for churn               | Front-loaded SaaS churn; hardware would use shape > 1.0                       |
-| Pre-treatment covariates only in Cox | Avoids mediator bias (Pearl, 2009)                                            |
-| Efron tie method                     | More accurate than Breslow for heavy ties (monthly billing cycles)            |
+| Decision                             | Rationale                                                                                                                                                                                                  |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Synthetic data (not real)            | No access to real support data; parameters calibrated to published benchmarks                                                                                                                              |
+| Template-based RAG (not LLM)         | Isolates retrieval/generation architecture effects without API costs                                                                                                                                       |
+| TF-IDF (not embeddings)              | Demonstrates the pipeline; swap for sentence-transformers in production                                                                                                                                    |
+| DuckDB (not Snowflake)               | Zero-cost, zero-setup analytical store with full SQL support                                                                                                                                               |
+| Bonferroni (not O'Brien-Fleming)     | Most conservative; OBF would allow earlier stopping with the same total α                                                                                                                                  |
+| Weibull(0.7) for churn               | Decreasing hazard (honeymoon effect): poorly-matched customers churn early, survivors become stickier — standard B2B SaaS pattern. Hardware/physical products use shape > 1 (wear-out, increasing hazard). |
+| Pre-treatment covariates only in Cox | Avoids mediator bias (Pearl, 2009)                                                                                                                                                                         |
+| Efron tie method                     | More accurate than Breslow for heavy ties (monthly billing cycles)                                                                                                                                         |
 
 ## REFERENCES:
 
