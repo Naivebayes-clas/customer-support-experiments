@@ -2,25 +2,25 @@
 
 A unified experimentation platform for an AI-powered customer support system. Built to demonstrate the full data science workflow: **segmentation → RAG evaluation → A/B testing → survival analysis → end-to-end pipeline**, grounded in real-world B2B SaaS benchmarks.
 
----
 
-#### Key Results
 
-| Test                | Control      | Treatment    | Effect            | p-value | Significant |
-| ------------------- | ------------ | ------------ | ----------------- | ------- | ----------- |
-| **Resolution Time** | 10.61 hrs    | 10.33 hrs    | −0.28 hrs (−2.6%) | 0.013   | ✓           |
-| **CSAT**            | 3.93         | 4.00         | +0.07 (+1.8%)     | <0.001  | ✓           |
-| **Escalation Rate** | 19.0%        | 19.3%        | +0.3 pp           | 0.574   | ✗           |
-| **Reopen Rate**     | 12.2%        | 11.8%        | −0.3 pp           | 0.388   | ✗           |
-| **Churn Hazard**    | 11.9% annual | 10.4% annual | HR = 0.870 (−13%) | 0.041   | ✓           |
+### Results at a Glance
 
----
+| Metric                 | Improvement                         | Statistical Evidence           |
+| ---------------------- | ----------------------------------- | ------------------------------ |
+| Resolution time        | **−2.6%** (10.61 → 10.33 hrs)       | p = 0.013, d = −0.035          |
+| CSAT                   | **+1.8%** (3.93 → 4.00)             | p < 0.001, d = 0.092           |
+| Annual churn           | **−13% hazard** (11.9% → 10.4%)     | HR = 0.870, log-rank p = 0.041 |
+| RAG faithfulness       | **+85%** (0.25 → 0.46)              | enhanced vs. standard prompt   |
+| RAG correctness        | **+100%** (0.33 → 0.67)             | enhanced vs. standard prompt   |
+| Segments identified    | **4 distinct customer segments**    | K-Means, silhouette-validated  |
+| Journey states modeled | **6 states, 81% direct resolution** | Markov chain                   |
+
+**n = 5,000 customers | 20,132 tickets | 120,660 conversation turns | 5,000 churn observations**
 
 ## Dashboard
 
 ![Dashboard Summary](outputs/dashboard_summary.png)
-
-
 
 | Metric          | Your Value                  | Real Benchmark                                       | Verdict                                 |
 | --------------- | --------------------------- | ---------------------------------------------------- | --------------------------------------- |
@@ -30,21 +30,12 @@ A unified experimentation platform for an AI-powered customer support system. Bu
 | Churn lift      | −1.5pp (−12.6% relative)    | HR≈0.85 → ~13% relative reduction over 365d          | ✓ consistent                            |
 | Segments        | 931 / 1,008 / 1,095 / 1,966 | —                                                    | ✓ (4 clusters, n=5,000)                 |
 
-
-
-
-
 ## Module 2: A/B Testing
 
 ### Power Curve
 
 Sample size required to detect effects of varying magnitude at 80% power (α = 0.05):
 ![Power Curve](outputs/power_curve.png)
-
-
-
-
-
 
 | Effect Size            | n per group |
 | ---------------------- | ----------- |
@@ -63,15 +54,7 @@ Split by unit: continuous metrics (hours, CSAT points) vs. rate metrics (percent
 Bonferroni alpha spending: stop threshold = α/m = 0.01 at every look. All interim p-values exceed 0.01 → correct decision is CONTINUE.
 ![Sequential Monitoring](outputs/sequential.png)
 
-
-
-
-
 ## Why it didn't stop?
-
-
-
-
 
 | **Look** | **% Data** | **p-value**    | **< 0.01?** | **Decision**     |
 | -------- | ---------- | -------------- | ----------- | ---------------- |
@@ -81,19 +64,11 @@ Bonferroni alpha spending: stop threshold = α/m = 0.01 at every look. All inter
 | 4        | 80%        | 0.0222         | ✗           | CONTINUE         |
 | 5        | 100%       | ****0.0133**** | ✗           | ****CONTINUE**** |
 
-
-
-
-
 The p-value drops monotonically (more data → more precise estimate →
 smaller p), but it ****never dips below 0.01****.
 At the final look, p = 0.0133 is *close* but still above the threshold.
 
 ****The correct conclusion:**** "Not significant at the Bonferroni-corrected level. Do not claim the treatment works."
-
-
-
-
 
 ## The teaching point: Bonferroni is overly conservative
 
@@ -106,10 +81,6 @@ The problem with Bonferroni spending is that it's ****flat**** — it spends the
    You'd want to spend *more* α here.
 
 ****O'Brien-Fleming**** does exactly this:
-
-
-
-
 
 | **Look** | **Bonferroni threshold** | **O'Brien-Fleming threshold** |
 | -------- | ------------------------ | ----------------------------- |
@@ -129,21 +100,12 @@ With O'Brien-Fleming, the final threshold would be ~0.035, and here p =
 PCA projection (2D view captures 62.5% of total variance). Discrete legend per segment.
 ![Customer Segments](outputs/segments.png)
 
-
-
-
-
-
 | Segment             | n     | Avg Tickets | Avg Resolution (hrs) | Avg CSAT |
 | ------------------- | ----- | ----------- | -------------------- | -------- |
 | Escalators (0)      | 931   | 3.8         | 12.6                 | 3.72     |
 | Quick Resolvers (1) | 1,966 | 2.4         | 7.8                  | 4.12     |
 | At-Risk (2)         | 1,095 | 4.2         | 11.3                 | 3.58     |
 | Standard (3)        | 1,008 | 3.5         | 10.1                 | 3.91     |
-
-
-
-
 
 | PC              | Typical dominant features (in your data) | Interpretation                                                    |
 | --------------- | ---------------------------------------- | ----------------------------------------------------------------- |
@@ -159,10 +121,6 @@ PCA projection (2D view captures 62.5% of total variance). Discrete legend per s
 
 Rows = from-state, columns = to-state. Each row sums to 1.0.
 ![Markov Matrix](outputs/markov_matrix.png)
-
-
-
-
 
 | From                              | To                                   | P     |
 | --------------------------------- | ------------------------------------ | ----- |
@@ -192,10 +150,6 @@ The expected path length is just the **probability-weighted average**:
 Identical transition matrices — the treatment affects time-in-state (speed), not state-transition probabilities.
 ![Markov Comparison](outputs/markov_comparison.png)
 
-
-
-
-
 | Analysis                   | What it captures                  | Result                        |
 | -------------------------- | --------------------------------- | ----------------------------- |
 | Markov transition matrices | Journey **structure** (routing)   | Identical ✓ (correct)         |
@@ -206,11 +160,6 @@ Identical transition matrices — the treatment affects time-in-state (speed), n
 RAGAS-style metrics across 4 pipeline configurations (prompt style × chunk size):
 ![RAG Metrics](outputs/rag_metrics.png)
 
-
-
-
-
-
 | Config            | Faithfulness | Relevance | Correctness |
 | ----------------- | ------------ | --------- | ----------- |
 | standard_full     | 0.249        | 0.701     | 0.329       |
@@ -219,10 +168,6 @@ RAGAS-style metrics across 4 pipeline configurations (prompt style × chunk size
 | enhanced_split    | 0.415        | 0.745     | 0.436       |
 
 ###### Key finding:  Enhanced prompts improve faithfulness by +85% and correctness by +100% over standard. Full-document retrieval outperforms sentence-level splitting on faithfulness and correctness.
-
-
-
-
 
 ****Why full > split for faithfulness:**** When you split a document into chunks, the model only sees a *portion* of the context. If it makes a claim that's true but was in the *other* chunk (not retrieved), that claim is ****unsupported by the retrieved context**** → faithfulness drops. The full document provides all the evidence, so more claims can be verified.
 
@@ -237,10 +182,6 @@ on that fact → correctness drops.
 
 Weibull(0.7) time-to-churn → front-loaded churn (steep early decline, then flattens). Log-rank p-value annotated.
 ![Survival Curves](outputs/survival_curves.png)
-
-
-
-
 
 ****Reading the curves:****
 
@@ -258,26 +199,14 @@ Weibull(0.7) time-to-churn → front-loaded churn (steep early decline, then fla
 
 ###### Adjusted only for pre-treatment covariates (n_tickets). Post-treatment mediators (CSAT, escalations) excluded to avoid bias. ![Cox Forest Plot](outputs/cox_forest.png)
 
-
-
-
-
 | Variable      | HR    | 95% CI       | Interpretation                             |
 | ------------- | ----- | ------------ | ------------------------------------------ |
 | **treatment** | 0.870 | [0.78, 0.97] | 13%  reduction in churn hazard             |
 | n_tickets     | 1.036 | [1.01, 1.06] | Each extra ticket → 3.6% higher churn risk |
 
-
-
 ## Real-World Benchmarks
 
 All synthetic data parameters are calibrated to published B2B SaaS benchmarks:
-
-
-
-
-
-
 
 | Metric          | Benchmark           | Source                     | Our Value       |
 | --------------- | ------------------- | -------------------------- | --------------- |
@@ -286,8 +215,6 @@ All synthetic data parameters are calibrated to published B2B SaaS benchmarks:
 | Resolution time | 8–48 hrs (B2B SaaS) | Jitbit, Count.co           | 10.3–10.6 hrs ✓ |
 | Escalation rate | 10–20%              | Industry standard          | 19.1% ✓         |
 | Reopen rate     | 5–15%               | Zendesk benchmarks         | 12.0% ✓         |
-
-
 
 ## Statistical Methods
 
