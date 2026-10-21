@@ -331,43 +331,6 @@ This runs all 5 modules end-to-end and generates all plots, CSVs, and the DuckDB
 
 ---
 
-## Project Structure
-
-customer-support-experiments/
-├── src/
-│   ├── __init__.py
-│   ├── data_generator.py      # Unified synthetic data (calibrated to benchmarks)
-│   ├── segmentation.py        # K-Means + Markov Chain (Module 3)
-│   ├── rag_evaluator.py       # RAG pipeline + RAGAS metrics (Module 1)
-│   ├── ab_tester.py           # A/B testing engine (Module 2)
-│   ├── survival.py            # Cox PH, KM, log-rank (Module 4)
-│   ├── pipeline.py            # DuckDB + Parquet (Module 5)
-│   └── visualizer.py          # All plots
-├── notebooks/
-│   └── full_demo.py           # Master script (runs everything)
-├── outputs/                   # Generated results
-│   ├── power_curve.png
-│   ├── ci_summary.png
-│   ├── sequential.png
-│   ├── segments.png
-│   ├── markov_matrix.png
-│   ├── markov_comparison.png
-│   ├── rag_evaluation.csv
-│   ├── rag_metrics.png
-│   ├── survival_curves.png
-│   ├── cox_forest.png
-│   ├── dashboard_summary.png
-│   ├── metrics.duckdb
-│   ├── tickets.parquet
-│   ├── conversations.parquet
-│   ├── churn.parquet
-│   └── dashboard/             # Power BI-ready CSVs
-├── tests/
-├── requirements.txt
-└── README.md   
-
-
-
 ## Module Details
 
 ### Module 1: RAG Chatbot Evaluation
